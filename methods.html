@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Training Methods - Pawfect Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+<nav>
+    <div class="nav-container">
+        <h1>Pawfect Training</h1>
+        
+        <button class="hamburger" aria-label="Menu">
+            <i style="color: #fff;" class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="methods.html" class="nav-link active">Methods</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <main>
+        <section class="hero">
+            <h2>Our Training Methods</h2>
+            <p>Balanced training custom to each dog</p>
+        </section>
+
+        <section class="methods-container">
+            <div class="method-card">
+                <h3>Our Training Philosophy</h3>
+                <p>At Pawfect Training, we believe in building strong, positive relationships between dogs and their owners. Our methods are:</p>
+                <ul>
+                    <li>Consists of a balance between positive and negative reinforcement</li>
+                    <li>Focuses on teaching using positive reinforcement methods</li>
+                    <li>Tailored to each dog's individual needs</li>
+                    <li>Designed to create lasting behavioral change</li>
+                </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Positive Reinforcement</h3>
+                <p>We believe that new behaviors should be introduced using positive reinforcement.
+                    Many dogs thrive with purely positive reinforcement: treats, praise, and enthusiastic encouragement.</p>
+                <ul>
+                    <li>Creates a dog that loves to perform your commands</li>
+                    <li>Fosters a positive relationship between you and your dog</li>
+                    <li>Uses treats and praise as motivation</li>
+                    <li>Builds the dog's confidence through success</li>
+                </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Negative Reinforcement</h3>
+                <p>“Negative” sounds harsh, but here it just means a quick, harmless “try again”
+                    cue - no pain, just clarity. Think of a teacher saying “2 + 2 isn’t 5” after
+                    the student already learned the answer. Likewise, a brief reminder helps a 
+                    dog correct a known command and succeed.</p>
+                    <ul>
+                      <li>Sharpens reliability around real-world distractions</li>
+                      <li>Shows clear consequences for ignoring a known cue</li>
+                      <li>Provides consistent, easy-to-read signals</li>
+                      <li>Some dogs thrive on praise alone; others need brief corrections</li>
+                      <li>No compulsion, never using fear or pain</li>
+                      <li>Quick feedback → correct choice → instant praise</li>
+                    </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Relationship Building</h3>
+                <p>Strong bonds lead to better training outcomes. We teach you how to communicate effectively with your dog and build lasting trust.</p>
+                <ul>
+                    <li>Clear communication techniques</li>
+                    <li>Bond-strengthening games</li>
+                    <li>Consistency training</li>
+                    <li>Family involvement strategies</li>
+                </ul>
+            </div>
+
+            <div class="method-card">
+                <h3>Practical Application</h3>
+                <p>Training should work in real-world situations. We focus on practical skills that you can use in everyday life with your dog.</p>
+                <ul>
+                    <li>Real-world scenario training</li>
+                    <li>Distraction proofing</li>
+                    <li>Public space practice</li>
+                    <li>Lifestyle integration</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ───── FOOTER ───── -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: pawfect.training@gmail.com</li>
+          <li>Phone: (407) 494-4040</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2025 Pawfect Training. All rights reserved.</p>
+  </footer>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const btn  = document.querySelector('.hamburger');
+        const menu = document.querySelector('.nav-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.nav-container')) {
+            menu.classList.remove('show');
+            }
+        });
+        });
+    </script>
+</body>
+</html>

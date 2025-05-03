@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Pawfect Training</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- ───── NAV (same working structure) ───── -->
+  <nav>
+    <div class="nav-container">
+      <h1>Pawfect Training</h1>
+
+      <button class="hamburger" aria-label="Menu">
+        <i style="color: #fff;" class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html"   class="nav-link">Home</a></li>
+        <li><a href="methods.html" class="nav-link">Methods</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html"     class="nav-link active">FAQ</a></li><!-- active -->
+        <li><a href="about.html"   class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───── MAIN ───── -->
+  <main>
+    <section class="hero">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to your dog training questions</p>
+    </section>
+
+    <section class="faq-container">
+      <!-- (FAQ items unchanged) -->
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does training typically take?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Training duration varies depending on your dog's needs and the chosen program. 
+          General obedience typically takes 4-6 weeks, while behavior modification might take longer. 
+          We'll provide a more specific timeline during your consultation.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What training methods do you use?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We use balanced training techniques that are effective and humane. This includes
+          clicker training, reward-based methods, use of training tools, and strong relationship 
+          between dogs and their owners.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What age should I start training my puppy?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Puppies can start training as early as 8 weeks old. Early training is crucial for 
+          socialization and early-on prevention of behavior problems. We offer specific puppy 
+          programs designed for young dogs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer group classes or private training?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We offer private training sessions to ensure personalized attention.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What breeds do you work with?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We work with all breeds and sizes of dogs. Our methods are adaptable to each dog's 
+          individual personality and needs, regardless of breed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How soon can we start training?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We typically schedule new clients within a week of initial contact, depending on availability.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer virtual training sessions?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes, we offer both in-person and virtual training sessions to accommodate different needs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What is your cancellation policy?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We require 24 hours notice for cancellations. Late cancellations may be subject to a fee.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you work with aggressive dogs?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          A consultation is required first. Some owners might mistake aggression for reactivity
+          which are two completely different issues, so a thorough assessment over phone or video 
+          call is needed first.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───── FOOTER ───── -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: pawfect.training@gmail.com</li>
+          <li>Phone: (407) 494-4040</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2025 Pawfect Training. All rights reserved.</p>
+  </footer>
+
+
+  <!-- ───── SCRIPTS ───── -->
+  <script>
+    // hamburger toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn  = document.querySelector('.hamburger');
+      const menu = document.querySelector('.nav-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        menu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.nav-container')) menu.classList.remove('show');
+      });
+    });
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const parentItem = question.parentElement;
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('i');
+          
+          // Toggle active class on parent item
+          parentItem.classList.toggle('active');
+          
+          // Rotate chevron icon
+          icon.style.transform = parentItem.classList.contains('active') ? 
+                                'rotate(180deg)' : 
+                                'rotate(0deg)';
+        });
+      });
+    });
+    </script>
+    
+  <!-- keep your existing script.js if it handles FAQ accordion -->
+  <script src="script.js"></script>
+</body>
+</html>
