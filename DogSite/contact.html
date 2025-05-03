@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Pawfect Training</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-info {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-card {
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      margin-top: 0;
+    }
+
+    .contact-form {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .cta-button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <!-- ───── NAV (same structure used on other fixed pages) ───── -->
+  <nav>
+    <div class="nav-container">
+      <h1>Pawfect Training</h1>
+
+      <button class="hamburger" aria-label="Menu">
+        <i style="color: #fff;" class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html"   class="nav-link">Home</a></li>
+        <li><a href="methods.html" class="nav-link">Methods</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html"     class="nav-link">FAQ</a></li>
+        <li><a href="about.html"   class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li><!-- active -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───── MAIN ───── -->
+  <main>
+    <section class="hero">
+      <h2>Get in Touch</h2>
+      <p>We're here to help you and your furry friend</p>
+    </section>
+
+    <section class="contact-content">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+
+          <div class="info-card">
+            <h4>Phone</h4>
+            <p>(407) 494-4040</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Email</h4>
+            <p>pawfect.training@gmail.com</p>
+          </div>
+
+          <div class="info-card">
+            <h4>Business Hours</h4>
+            <p>
+              Call me any time!
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form action="https://formsubmit.co/marygoncharova1@gmail.com" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="training">Training Programs</option>
+                <option value="behavior">Behavior Issues</option>
+                <option value="puppy">Puppy Training</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───── FOOTER ───── -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: pawfect.training@gmail.com</li>
+          <li>Phone: (407) 494-4040</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2025 Pawfect Training. All rights reserved.</p>
+  </footer>
+
+
+  <!-- ───── NAV SCRIPT ───── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn  = document.querySelector('.hamburger');
+      const menu = document.querySelector('.nav-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        menu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.nav-container')) menu.classList.remove('show');
+      });
+    });
+  </script>
+
+  <!-- keep your own script.js if you need it elsewhere -->
+  <script src="script.js"></script>
+</body>
+</html>
