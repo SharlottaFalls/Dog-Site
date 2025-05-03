@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me – Pawfect Training</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- ───── NAV (same working structure) ───── -->
+  <nav>
+    <div class="nav-container">
+      <h1>Pawfect Training</h1>
+
+      <button class="hamburger" aria-label="Menu">
+        <i style="color: #fff;" class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html"   class="nav-link">Home</a></li>
+        <li><a href="methods.html" class="nav-link">Methods</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faq.html"     class="nav-link">FAQ</a></li>
+        <li><a href="about.html"   class="nav-link active">About</a></li><!-- active -->
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───── MAIN ───── -->
+  <main>
+    <section class="hero">
+      <h2>About Me</h2>
+      <p>
+        I have a deep passion for achieveing great results with every dog.
+      </p>
+    </section>
+
+    <section class="about-content">
+      <!-- <img src="images/trainer.jpg" alt="Trainer" /> -->
+      <div class="about-text">
+        <h3>My Story</h3>
+        <p>
+          I have had the privilege of working with dogs from Canine Companions, a service dog
+          organization, as well as my own dog. This experience has allowed me to develop a great 
+          love for training. My journey with dogs has been incredibly rewarding, and I am committed to helping others 
+          achieve similar success with their furry friends! <br>
+          <br>
+        </p>
+        <a href="gallery.html" class="cta-button">Me & Dogs</a>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Begin?</h2>
+      <p>Contact me today to schedule your dog’s first session. Let’s help your dog grow together!</p>
+      <a href="contact.html" class="cta-button">Get Started</a>
+    </section>
+  </main>
+
+  <!-- ───── FOOTER ───── -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: pawfect.training@gmail.com</li>
+          <li>Phone: (407) 494-4040</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2025 Pawfect Training. All rights reserved.</p>
+  </footer>
+
+  <!-- ───── NAV SCRIPT ───── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn  = document.querySelector('.hamburger');
+      const menu = document.querySelector('.nav-menu');
+      if (!btn || !menu) return;               // safety
+
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        menu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.nav-container')) menu.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
